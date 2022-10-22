@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-fastapi-deployment
+  name: python-fastapi
   labels:
     name: python-fastapi
 spec:

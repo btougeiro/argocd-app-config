@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: python-fastapi-argocd
+  name: python-fastapi
   namespace: argocd
 spec:
   project: default

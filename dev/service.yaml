@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: python-fastapi-service
+  name: python-fastapi
 spec:
   selector:
     name: python-fastapi
   ports:
-    - name: python-fastapi-service-port
+    - name: python-fastapi
       protocol: TCP
-      port: 8000
+      port: 80
       targetPort: container-port
