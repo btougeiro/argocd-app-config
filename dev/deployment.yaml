@@ -1,19 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: python-fastapi-deployment
+  labels:
+    name: python-fastapi
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: myapp
-  replicas: 2
+      name: python-fastapi
   template:
     metadata:
       labels:
-        app: myapp
+        name: python-fastapi
     spec:
       containers:
-      - name: myapp
-        image: nanajanashia/argocd-app:1.0
-        ports:
-        - containerPort: 8080
+        - name: python-fastapi
+          image: btougeiro/python-fastapi:v1.0.0
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 200m
+              memory: 200Mi
+            ports:
+              - containerPort: 8000
+                name: container-port
