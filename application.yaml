@@ -9,14 +9,14 @@ spec:
   source:
     repoURL: https://github.com/btougeiro/argocd-app-config.git
     targetRevision: HEAD
-    path: dev
-  destination: 
+    path: k8s-manifests
+  destination:
     server: https://kubernetes.default.svc
     namespace: python-fastapi
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+      - CreateNamespace=true
 
     automated:
       selfHeal: true

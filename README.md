@@ -13,15 +13,13 @@ kubectl port-forward svc/argocd-server 8080:443 -n argocd
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode && echo
 
 # you can change and delete init password
-
 ```
-</br>
 
 #### Links
 
-* Config repo: [https://gitlab.com/nanuchi/argocd-app-config](https://gitlab.com/nanuchi/argocd-app-config)
+* Config repo: [https://github.com/btougeiro/argocd-app-config.git](https://github.com/btougeiro/argocd-app-config.git)
 
-* Docker repo: [https://hub.docker.com/repository/docker/nanajanashia/argocd-app](https://hub.docker.com/repository/docker/nanajanashia/argocd-app)
+* Docker repo: [https://hub.docker.com/repository/docker/btougeiro/python-fastapi](https://hub.docker.com/repository/docker/btougeiro/python-fastapi)
 
 * Install ArgoCD: [https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd](https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd)
 
