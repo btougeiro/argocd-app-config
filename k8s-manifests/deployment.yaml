@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: python-fastapi
-          image: btougeiro/python-fastapi:v1.0.0
+          image: ghcr.io/btougeiro/python-fastapi:v1.0.1
           ports:
             - name: container-port
               containerPort: 8000
